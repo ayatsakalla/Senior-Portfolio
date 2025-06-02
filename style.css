@@ -76,4 +76,10 @@ p {
     border: 2px solid #bf94e4;
     border-radius: 60%;
 }
+
+.rounded-pill {
+    border: none;
+    background-color: #bf94e4;
+    color: white;
+}
 /* title end */
