@@ -1,0 +1,79 @@
+body {
+    background-color: #f5f5f5;
+    color: #bf94e4;
+}
+
+.bod {
+    padding-top: 6%;
+}
+
+@font-face {
+    font-family: 'shalma';
+    src: url('fonts/LoftygoalsRegular-9Y5Xy.otf');
+}
+
+.shalma {
+    font-family: 'shalma';
+}
+
+@font-face {
+    font-family: 'thornrock';
+    src: url('fonts/ThornrockRegular-8OAWB.ttf');
+}
+
+.thornrock {
+    font-family: 'thornrock';
+}
+
+/* navbar start*/
+.navbar, .offcanvas-header, .offcanvas-body {
+    background-color: #555555;
+}
+
+.dropdown-menu {
+    border: 5px solid #bf94e4;
+    --bs-dropdown-link-active-bg: #bf94e4;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #bf94e4;
+}
+
+.nav-link:active {
+    color: #bf94e4;
+}
+
+.navbar-nav .nav-link.show {
+    color: #bf94e4;
+}
+
+/* navbar end */
+
+/* title start */
+.title-info {
+    background-color: #555555;
+    border-radius: 2%;
+    border: 2px solid #bf94e4;
+    width: fit-content;
+    height: fit-content;
+    padding: 2%;
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p {
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.img-title {
+    border: 2px solid #bf94e4;
+    border-radius: 60%;
+}
+/* title end */
