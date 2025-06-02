@@ -56,7 +56,7 @@ body {
 /* title start */
 .title-info {
     background-color: #555555;
-    border-radius: 2%;
+    border-radius: 10%;
     border: 2px solid #bf94e4;
     width: fit-content;
     height: fit-content;
@@ -81,5 +81,11 @@ p {
     border: none;
     background-color: #bf94e4;
     color: white;
+    padding: 3%;
+    width: 25%;
+}
+
+button.rounded-pill:hover {
+    background-color: #555555;
 }
 /* title end */
