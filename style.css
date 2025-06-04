@@ -150,3 +150,7 @@ p {
     object-fit: cover;
     border-radius: 50%;
 }
+
+.menu-selection {
+    display: none;
+}

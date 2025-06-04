@@ -1,19 +1,12 @@
 $(document).ready(function () {
-    $('.menu-selection').hide();
-
-    $('.menu-nav-btn').on('click', function () {
-        const target = $(this).data('target');
+    $(".menu-nav-btn").click(function () {
+        // Get target ID from data-target attribute
+        var target = $(this).data("target");
 
         // Hide all sections
-        $('.menu-selection').hide();
+        $(".menu-selection").addClass("d-none");
 
-        // Show the clicked one
-        $(target).show();
-
-        // Manage active state
-        $('.menu-nav-btn').removeClass('active-btn');
-        $(this).addClass('active-btn');
+        // Show the selected section
+        $(target).removeClass("d-none");
     });
-
-
 });
