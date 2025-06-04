@@ -3,6 +3,9 @@ body {
     color: #bf94e4;
 }
 
+.rutgers-red {
+    color: #CC0033 !important;
+}
 .bod {
     padding-top: 6%;
 }
@@ -58,6 +61,7 @@ body {
     background-color: #555555;
     border-radius: 10%;
     border: 2px solid #bf94e4;
+    color: white !important;
     width: fit-content;
     height: fit-content;
     padding: 2%;
@@ -76,16 +80,73 @@ p {
     border: 2px solid #bf94e4;
     border-radius: 60%;
 }
-
-.rounded-pill {
-    border: none;
-    background-color: #bf94e4;
-    color: white;
-    padding: 3%;
-    width: 25%;
-}
-
-button.rounded-pill:hover {
-    background-color: #555555;
-}
 /* title end */
+
+/* rutgers start */
+.rutty-info {
+    background-color: #CC0033;
+    border: 3px solid black;
+    color: white;
+        width: fit-content;
+        height: fit-content;
+        padding: 2%;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+/* rutgers end */
+
+.menu-nav-btn {
+    background-color: #555555;
+    border: 5px solid #bf94e4;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 5px;
+    transition: transform 0.3s;
+    margin: 0 auto;
+}
+
+.menu-nav-btn:hover {
+    transform: scale(1.05);
+}
+
+.menu-nav-btn img {
+    max-width: 50%;
+    height: auto;
+}
+
+.menu-nav-btn h4 {
+    font-size: 0.90rem;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .menu-nav-btn {
+        width: 80px;
+        height: 80px;
+    }
+
+    .menu-nav-btn h4 {
+        font-size: 0.5rem;
+    }
+}
+
+.logo-circle {
+    width: 300px;
+    /* or whatever size you need */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
