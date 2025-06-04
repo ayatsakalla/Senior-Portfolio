@@ -522,15 +522,115 @@
 
         <h1 class="shalma text-center">Web Design</h1>
 
-        <div class="row">
+        <div class="row d-flex justify-content-center align-items-center">
             <div class="col-4">
+                <h3 class="text-center shalma">Skills</h3>
+
+                <div class="row my-2">
+                    <div class="col-12">
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated shalma"
+                                role="progressbar" style="width: 95%;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100">HTML - 95%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row my-2">
+                    <div class="col-12">
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated shalma"
+                                role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100">CSS - 80%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row my-2">
+                    <div class="col-12">
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated shalma"
+                                role="progressbar" style="width: 60%;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100">JAVASCRIPT
+                                - 60%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row my-2">
+                    <div class="col-12">
+                        <div class="progress" style="height: 25px;">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated shalma"
+                                role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0"
+                                aria-valuemax="100">JAVA - 70%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
 
-            <div class="col-8">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, repellat corporis? Ipsa est
-                    cumque sed voluptas, ducimus quaerat cupiditate, maiores obcaecati sunt doloremque nisi! Quo
-                    perspiciatis temporibus commodi molestiae quia.</p>
+            <div class="col-6">
+                <div class="title-info rounded-4">
+                    <p class="thornrock">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, repellat
+                        corporis? Ipsa
+                        est
+                        cumque sed voluptas, ducimus quaerat cupiditate, maiores obcaecati sunt doloremque nisi! Quo
+                        perspiciatis temporibus commodi molestiae quia.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <h3 class="text-center shalma">My Work</h3>
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-12 col-md-7">
+                <div id="customCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                    <div class="carousel-indicators">
+                    </div>
+                    <div class="carousel-inner">
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#customCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="siteModal" tabindex="-1" aria-labelledby="siteModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="siteModalLabel"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12 col-md-4">
+                                <h4 id="modalSiteTitle"></h4>
+                                <p id="modalSiteDescription"></p>
+                                <a id="modalSiteLink" href="#" class="btn btn-primary" target="_blank">Visit Site</a>
+                            </div>
+                            <div class="col-12 col-md-8"> <img id="modalSiteImage" src="" class="img-fluid"
+                                    alt="Site Screenshot">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -554,6 +654,7 @@
 
     <!-- personal js -->
     <script src="script.js"></script>
+    <script src="carousel.js"></script>
 </body>
 
 </html>
