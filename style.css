@@ -296,3 +296,97 @@ p {
         /* Smaller max-width on mobile */
     }
 }
+
+/* Accordion Styling - Revised for All Four Corners Rounded (Open and Closed) */
+
+.accordion-item {
+    background-color: #555555;
+    /* Dark grey background */
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    /* Keep a subtle border if you like */
+    border-radius: 0.5rem;
+    /* Standard Bootstrap rounded corners for the overall item */
+    margin-bottom: 0.5rem;
+    /* Add some space between accordion items for better visual separation */
+    overflow: hidden;
+    /* Crucial to clip inner content to the rounded corners */
+}
+
+/* Header button styling */
+.accordion-button {
+    background-color: #555555;
+    /* Dark grey background for the button */
+    color: #bf94e4;
+    /* Purple text color for the button */
+    font-family: 'Thornrock', sans-serif;
+    position: relative;
+    /* Needed for z-index if we use it to overlay borders */
+    z-index: 2;
+    /* Ensures button is above body for border management */
+}
+
+/* Specific styling for the header button when it IS collapsed */
+.accordion-button.collapsed {
+    /* When collapsed, the button represents the entire item, so it should have all corners rounded */
+    border-radius: 0.5rem;
+    /* Apply full rounding when collapsed */
+}
+
+/* Specific styling for the header button when it IS NOT collapsed (i.e., when open) */
+.accordion-button:not(.collapsed) {
+    /* When open, the button should only have rounded top corners */
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+    /* No bottom rounding when open */
+    border-bottom-right-radius: 0;
+    /* No bottom rounding when open */
+    margin-bottom: -1px;
+    /* Overlap slightly with body border to ensure smooth join */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    /* Re-add a subtle border to delineate button from body if needed */
+}
+
+/* Text color for accordion body */
+.accordion-body {
+    background-color: #555555;
+    /* Dark grey background for the body content */
+    color: #bf94e4;
+    /* Purple text color for the body content */
+    font-family: 'Thornrock', sans-serif;
+    /* Apply rounded bottom corners to the body, as it's the bottom part of the open item */
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding-top: 1rem;
+    /* Adjust padding to separate from button if needed */
+    z-index: 1;
+    /* Body should be below the button for border management */
+}
+
+/* Strong tag within accordion body (for dates) */
+.accordion-body strong.shalma {
+    color: #bf94e4;
+    /* Ensure the strong text is also purple */
+    font-family: 'Shalma', sans-serif;
+}
+
+/* To remove the default blue focus outline from buttons if desired */
+.accordion-button:focus {
+    box-shadow: none;
+    outline: 0;
+}
+
+/* To adjust the arrow icon color */
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(250deg);
+}
+
+.accordion-button.collapsed::after {
+    filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(250deg);
+}
+
+/* Added for visual separation between accordion items */
+.accordion {
+    --bs-accordion-border-width: 0;
+    /* Remove default Bootstrap border between items */
+}
