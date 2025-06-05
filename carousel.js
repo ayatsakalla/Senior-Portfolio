@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const carouselIndicators = document.querySelector('.carousel-indicators');
     const customCarousel = document.getElementById('customCarousel');
     // Add rounded-4 class to the carousel element
-    customCarousel.classList.add('rounded-4'); // Added this line
+    customCarousel.classList.add('rounded-4');
     const siteModal = new bootstrap.Modal(document.getElementById('siteModal'));
 
     // Sample data for your slides
@@ -93,22 +93,43 @@ document.addEventListener('DOMContentLoaded', function () {
             bottomCenterOverlay.innerHTML = `<h5 class="shalma">${slide.title}</h5>`;
 
             const modalTriggerButton = document.createElement('button');
-            modalTriggerButton.classList.add('btn', 'mt-2', 'thornrock', 'text-white'); // Added text-white
-            modalTriggerButton.style.backgroundColor = '#bf94e4'; // Added background-color
+            modalTriggerButton.classList.add('btn', 'mt-2', 'thornrock', 'text-white');
+            modalTriggerButton.style.backgroundColor = '#bf94e4';
             modalTriggerButton.setAttribute('data-bs-toggle', 'modal');
             modalTriggerButton.setAttribute('data-bs-target', '#siteModal');
             modalTriggerButton.textContent = slide.buttonText;
+
+            // Store slide data as a property of the button for easy access
+            modalTriggerButton.slideData = slide;
+
             modalTriggerButton.addEventListener('click', function () {
-                // Populate modal content
-                document.getElementById('siteModalLabel').textContent = slide.modal.title;
-                document.getElementById('modalSiteTitle').textContent = slide.modal.title;
-                document.getElementById('modalSiteDescription').textContent = slide.modal.description;
-                document.getElementById('modalSiteLink').href = slide.modal.siteLink;
-                document.getElementById('modalSiteImage').src = slide.modal.siteImage;
+                // Populate modal content using the stored slide data
+                const modalData = this.slideData.modal;
+
+                console.log('Populating modal with:', modalData); // Debug log
+
+                document.getElementById('siteModalLabel').textContent = modalData.title;
+                document.getElementById('modalSiteTitle').textContent = modalData.title;
+                document.getElementById('modalSiteDescription').textContent = modalData.description;
+
+                // Set the href attribute and add click event for extra safety
+                const visitLink = document.getElementById('modalSiteLink');
+                visitLink.href = modalData.siteLink;
+                visitLink.onclick = function (e) {
+                    // Ensure the link works even if href fails
+                    e.preventDefault();
+                    window.open(modalData.siteLink, '_blank');
+                    return false;
+                };
+
+                document.getElementById('modalSiteImage').src = modalData.siteImage;
+                document.getElementById('modalSiteImage').alt = modalData.title + ' Screenshot';
+
+                console.log('Visit link href set to:', modalData.siteLink); // Debug log
             });
+
             bottomCenterOverlay.appendChild(modalTriggerButton);
             carouselItem.appendChild(bottomCenterOverlay);
-
             carouselInner.appendChild(carouselItem);
 
             // Create Carousel Indicator
@@ -126,6 +147,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     populateCarousel();
+
+    // Alternative approach: Add a global click handler for the visit button
+    document.addEventListener('click', function (e) {
+        if (e.target && e.target.id === 'modalSiteLink') {
+            const href = e.target.getAttribute('href');
+            if (href && href !== '#') {
+                console.log('Visit button clicked, opening:', href); // Debug log
+                // Let the default behavior work, but this is a backup
+            } else {
+                console.log('Visit button has no valid href'); // Debug log
+                e.preventDefault();
+            }
+        }
+    });
 
     // Autoplay control: Pause on hover, resume on mouse leave
     const carouselInstance = bootstrap.Carousel.getInstance(customCarousel) || new bootstrap.Carousel(customCarousel);
