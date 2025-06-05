@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const carouselInner = document.querySelector('.carousel-inner');
     const carouselIndicators = document.querySelector('.carousel-indicators');
     const customCarousel = document.getElementById('customCarousel');
+    // Add rounded-4 class to the carousel element
+    customCarousel.classList.add('rounded-4'); // Added this line
     const siteModal = new bootstrap.Modal(document.getElementById('siteModal'));
 
     // Sample data for your slides
@@ -79,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesData.forEach((slide, index) => {
             // Create Carousel Item
             const carouselItem = document.createElement('div');
-            carouselItem.classList.add('carousel-item');
+            carouselItem.classList.add('carousel-item', 'rounded-4', 'bord');
             if (index === 0) {
                 carouselItem.classList.add('active');
             }

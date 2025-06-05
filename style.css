@@ -226,3 +226,7 @@ p {
 .modal-content {
     background-clip: border-box;
 }
+
+.bord {
+    border: 3px solid #bf94e4;
+}
