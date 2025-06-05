@@ -230,3 +230,69 @@ p {
 .bord {
     border: 3px solid #bf94e4;
 }
+
+/* Custom styles for University Section Images */
+
+.university-image-style {
+    /* Define base size for larger screens */
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    /* Ensures image covers the circle without distortion */
+    /* border-radius: 50%; is applied by Bootstrap's rounded-circle class */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition for sizing changes */
+}
+
+/* Specific borders based on data-attribute */
+.university-image-style[data-border-color="black"] {
+    border: 5px solid black;
+}
+
+.university-image-style[data-border-color="#CC0033"] {
+    border: 5px solid #CC0033;
+}
+
+
+/* Adjust size for medium screens (Bootstrap md breakpoint) */
+@media (max-width: 991.98px) {
+
+    /* Applies from small to medium-large screens (less than lg) */
+    .university-image-style {
+        width: 160px;
+        height: 160px;
+        border-width: 4px;
+        /* Slightly thinner border for smaller images */
+    }
+}
+
+/* Adjust size for small screens (Bootstrap sm breakpoint) */
+@media (max-width: 767.98px) {
+
+    /* Applies from extra small to medium screens (less than md) */
+    .university-image-style {
+        width: 120px;
+        /* Smaller size for mobile */
+        height: 120px;
+        border-width: 3px;
+        /* Even thinner border */
+    }
+}
+
+/* Style for the Graduation Cap image */
+.grad-cap-style {
+    max-width: 150px;
+    /* Upper limit on larger screens */
+    height: auto;
+    /* Maintain aspect ratio */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition */
+}
+
+/* Adjust grad cap size for small screens */
+@media (max-width: 767.98px) {
+    .grad-cap-style {
+        max-width: 100px;
+        /* Smaller max-width on mobile */
+    }
+}
