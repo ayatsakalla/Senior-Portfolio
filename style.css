@@ -390,3 +390,61 @@ p {
     --bs-accordion-border-width: 0;
     /* Remove default Bootstrap border between items */
 }
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px;
+    /* More vertical padding */
+    background-color: #555555;
+    /* Very light background, almost white */
+    color: #bf94e4;
+    /* Soft dark grey text */
+    font-family: 'thornrock';
+    /* System fonts for a native, clean look */
+    font-size: 0.95em;
+    /* Slightly smaller text */
+    border-top: 1px solid #bf94e4;
+    /* A subtle thin line at the top */
+    box-sizing: border-box;
+    /* Ensures padding/border are included in width */
+
+    /* Flexbox for centering and spacing */
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center horizontally */
+    justify-content: center;
+    /* Center vertically (if height allows) */
+}
+
+footer p {
+    margin-bottom: 15px;
+    /* More space between copyright and links */
+    color: #bf94e4;
+    /* Slightly lighter for copyright */
+}
+
+.footer-links {
+    display: flex;
+    /* Use flexbox for the links */
+    gap: 20px;
+    /* Space between the links */
+}
+
+.footer-links a {
+    color: white;
+    /* A nice, standard blue for links */
+    text-decoration: none;
+    /* No underline by default */
+    font-weight: 500;
+    /* Slightly bolder for emphasis */
+    transition: color 0.3s ease;
+    /* Smooth transition for hover effect */
+}
+
+.footer-links a:hover {
+    color: #bf94e4;
+    /* Darker blue on hover */
+    text-decoration: underline;
+    /* Subtle underline on hover */ }
