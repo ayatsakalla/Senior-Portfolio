@@ -172,7 +172,7 @@ p {
 }
 
 /* Adjust height for screens smaller than 768px (Bootstrap's 'md' breakpoint) */
-@media (max-width: 767.98px) {
+@media (max-width: 1300px) {
     .carousel-item {
         height: 400px;
         /* A more suitable height for tablets and landscape phones */
@@ -217,4 +217,12 @@ p {
 #modalSiteImage {
     max-height: 400px;
     object-fit: contain;
+}
+
+.modal-header, .modal-body, .modal-footer{
+    background-color: #555555;
+}
+
+.modal-content {
+    background-clip: border-box;
 }

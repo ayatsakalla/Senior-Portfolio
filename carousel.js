@@ -7,69 +7,69 @@ document.addEventListener('DOMContentLoaded', function () {
     // Sample data for your slides
     const slidesData = [
         {
-            image: 'https://via.placeholder.com/1200x600/FF5733/FFFFFF?text=Project+Alpha',
-            title: 'Project Alpha',
-            buttonText: 'View Details',
+            image: 'images/carousel/cones-crepes.png',
+            title: 'Cones and Crepes',
+            buttonText: 'Learn More',
             modal: {
-                title: 'Project Alpha Overview',
-                description: 'This is a detailed description of Project Alpha. It focuses on innovative solutions in web development, showcasing cutting-edge technologies and user-centric design principles.',
-                siteLink: 'https://www.example.com/projectalpha',
-                siteImage: 'https://via.placeholder.com/800x450/FF5733/FFFFFF?text=Project+Alpha+Site',
+                title: 'Cones and Crepes',
+                description: 'This was my first official client to have the privilege of building a website for. This client wanted a menu-style website for his local dessert business, and I was given the opportunity to make his dreams come to life for a website.',
+                siteLink: 'https://ayatsakalla.github.io/Cones-Crepes/',
+                siteImage: 'images/carousel/cones-crepes.png',
             }
         },
         {
-            image: 'https://via.placeholder.com/1200x600/33FF57/FFFFFF?text=EcoGarden+App',
-            title: 'EcoGarden App',
-            buttonText: 'Explore App',
+            image: 'images/carousel/little-bird-toy-company.png',
+            title: 'Little Toy Bird Company',
+            buttonText: 'Learn More',
             modal: {
-                title: 'EcoGarden App Features',
-                description: 'The EcoGarden App helps you manage your garden with smart watering schedules, plant care tips, and community features. A perfect blend of technology and nature.',
-                siteLink: 'https://www.example.com/ecogarden',
-                siteImage: 'https://via.placeholder.com/800x450/33FF57/FFFFFF?text=EcoGarden+App+Site',
+                title: 'Little Toy Bird Company',
+                description: 'Working with another classmate and I, we were given the task of creating a website for a fake company that sells wooden toys with all of the coding knowledge that we had learned from that year.',
+                siteLink: 'https://ayatsakalla.github.io/Little-Bird-Toy-Company/',
+                siteImage: 'images/carousel/little-bird-toy-company.png',
             }
         },
         {
-            image: 'https://via.placeholder.com/1200x600/3357FF/FFFFFF?text=Data+Analytics+Dashboard',
-            title: 'Data Analytics Dashboard',
-            buttonText: 'See Dashboard',
+            image: 'images/carousel/coco-chanel.png',
+            title: "Look Ma I'm Famous",
+            buttonText: 'Learn More',
             modal: {
-                title: 'Data Analytics Dashboard Deep Dive',
-                description: 'Our data analytics dashboard provides real-time insights into your business metrics, empowering informed decision-making with interactive visualizations.',
-                siteLink: 'https://www.example.com/dashboard',
-                siteImage: 'https://via.placeholder.com/800x450/3357FF/FFFFFF?text=Data+Analytics+Dashboard+Site',
+                title: "Look Ma I'm Famous",
+                description: 'My goal was to pick a famous artist, and create a website for them to describe their lifestyle from their childhood and their rise to success. I chose to do my project on Coco Chanel, an extremely successful designer. ',
+                siteLink: 'https://ayatsakalla.github.io/Look-Ma--I-m-Famous/',
+                siteImage: 'images/carousel/coco-chanel.png',
             }
         },
         {
-            image: 'https://via.placeholder.com/1200x600/FF33CC/FFFFFF?text=Virtual+Reality+Experience',
-            title: 'VR Experience',
-            buttonText: 'Dive In',
+            image: 'images/carousel/web-design.png',
+            title: 'Web Design Pathway Program',
+            buttonText: 'Learn More',
             modal: {
-                title: 'Virtual Reality Experience Showcase',
-                description: 'Immerse yourself in breathtaking virtual reality worlds. This project showcases the capabilities of VR in education and entertainment.',
-                siteLink: 'https://www.example.com/vr',
-                siteImage: 'https://via.placeholder.com/800x450/FF33CC/FFFFFF?text=VR+Site',
+                title: 'Web Design Pathway Program',
+                description: 'A group of students and I created a website to represent the Web Design Program that our school offers, and it was to simulate a client experience outside of the classroom, and our client was the teacher who ran this program.',
+                siteLink: 'https://zlevin1228.github.io/WebDesign/',
+                siteImage: 'images/carousel/web-design.png',
             }
         },
         {
-            image: 'https://via.placeholder.com/1200x600/FFFF33/333333?text=E-commerce+Platform',
-            title: 'E-commerce Platform',
-            buttonText: 'Shop Now',
+            image: 'images/carousel/trunk-or-treat.png',
+            title: 'Trunk or Treat',
+            buttonText: 'Learn More',
             modal: {
-                title: 'E-commerce Platform Overview',
-                description: 'A robust and scalable e-commerce platform designed for seamless shopping experiences, featuring secure payments and intuitive navigation.',
-                siteLink: 'https://www.example.com/ecommerce',
-                siteImage: 'https://via.placeholder.com/800x450/FFFF33/333333?text=E-commerce+Site',
+                title: 'Trunk or Treat',
+                description: 'The Peer Leaders, a club in my school, was running their annual Trunk-Or-Treat in the high school, and needed a website to advertise and let others know about the spooky event.',
+                siteLink: 'https://ayatsakalla.github.io/Trunk-Or-Treat/',
+                siteImage: 'images/carousel/trunk-or-treat.png',
             }
         },
         {
-            image: 'https://via.placeholder.com/1200x600/33FFFF/333333?text=Mobile+Game+Dev',
-            title: 'Mobile Game Dev',
-            buttonText: 'Play Game',
+            image: 'images/carousel/woodworking-ornaments.png',
+            title: 'Woodworking Ornaments',
+            buttonText: 'Learn More',
             modal: {
-                title: 'Mobile Game Development Project',
-                description: 'A fun and engaging mobile game developed with a focus on intuitive controls and captivating gameplay. Available on iOS and Android.',
-                siteLink: 'https://www.example.com/mobilegame',
-                siteImage: 'https://via.placeholder.com/800x450/33FFFF/333333?text=Mobile+Game+Site',
+                title: 'Woodworking Ornaments',
+                description: 'The woodworking class annually sells custom made wooden ornaments to sell during the Christmas seasons, and I helped make a website for the class to post out to families interested in purchasing a unique ornament for the winter holidays.',
+                siteLink: 'https://ayatsakalla.github.io/Woodworking-Ornaments/',
+                siteImage: 'images/carousel/woodworking-ornaments.png',
             }
         }
     ];
@@ -88,10 +88,11 @@ document.addEventListener('DOMContentLoaded', function () {
             // Create Bottom-Center Title and Button
             const bottomCenterOverlay = document.createElement('div');
             bottomCenterOverlay.classList.add('carousel-caption-bottom-center');
-            bottomCenterOverlay.innerHTML = `<h5>${slide.title}</h5>`;
+            bottomCenterOverlay.innerHTML = `<h5 class="shalma">${slide.title}</h5>`;
 
             const modalTriggerButton = document.createElement('button');
-            modalTriggerButton.classList.add('btn', 'btn-primary', 'mt-2'); // Add mt-2 for spacing
+            modalTriggerButton.classList.add('btn', 'mt-2', 'thornrock', 'text-white'); // Added text-white
+            modalTriggerButton.style.backgroundColor = '#bf94e4'; // Added background-color
             modalTriggerButton.setAttribute('data-bs-toggle', 'modal');
             modalTriggerButton.setAttribute('data-bs-target', '#siteModal');
             modalTriggerButton.textContent = slide.buttonText;
